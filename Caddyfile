@@ -1,0 +1,14 @@
+ddocs.io:443 {
+        tls internal
+        respond "ddocs.io"
+        # reverse_proxy frontend:3000
+}
+
+api.ddocs.io:443 {
+        tls internal
+        reverse_proxy backend:8080
+}
+
+:80, :443 {
+        respond 404
+}
