@@ -10,15 +10,15 @@ services:
     image: ghcr.io/discord-docs/frontend
     restart: unless-stopped
 
-  postgres:
-    image: postgres:14-alpine
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    volumes:
-      - "./data/postgres:/var/lib/postgresql/data"
-    labels:
-      com.centurylinklabs.watchtower.enable: false
-    restart: unless-stopped
+  #postgres:
+  #  image: postgres:14-alpine
+  #  environment:
+  #    - POSTGRES_PASSWORD=postgres
+  #  volumes:
+  #    - "./data/postgres:/var/lib/postgresql/data"
+  #  labels:
+  #    com.centurylinklabs.watchtower.enable: false
+  #  restart: unless-stopped
 
   watchtower:
     image: containrrr/watchtower
