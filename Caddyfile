@@ -1,6 +1,6 @@
 ddocs.io:443 {
         tls internal
-        respond "ddocs.io"
+        respond "ddocs.io https://discord.gg/HzJfeuUM5h"
         # reverse_proxy frontend:3000
 }
 
