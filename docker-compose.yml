@@ -4,6 +4,8 @@ services:
   backend:
     image: ghcr.io/discord-docs/backend
     env_file: "./env"
+    volumes:
+      - ./data/assets:/app/assets
     restart: unless-stopped
 
   frontend:
